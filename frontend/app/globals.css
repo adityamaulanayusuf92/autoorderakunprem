@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a0d2e 50%, #0f0a25 100%);
+  color: #e0e6ff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ========== GLASSMORPHISM EFFECTS ========== */
+.glass {
+  background: rgba(10, 14, 39, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.glass-md {
+  background: rgba(10, 14, 39, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.glass-lg {
+  background: rgba(10, 14, 39, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* ========== GLOW & NEON EFFECTS ========== */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.6), 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.glow-primary-xl {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.8), 0 0 60px rgba(99, 102, 241, 0.4);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+.glow-neon-blue {
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.6), 0 0 60px rgba(0, 217, 255, 0.2);
+}
+
+.glow-neon-pink {
+  box-shadow: 0 0 30px rgba(255, 16, 240, 0.6), 0 0 60px rgba(255, 16, 240, 0.2);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+}
+
+.glow-text-neon {
+  text-shadow: 0 0 30px rgba(0, 217, 255, 0.8), 0 0 60px rgba(217, 70, 239, 0.4);
+}
+
+.glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.glow-pulse-fast {
+  animation: glow-pulse-fast 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.8), 0 0 80px rgba(99, 102, 241, 0.3);
+  }
+}
+
+@keyframes glow-pulse-fast {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.8);
+  }
+}
+
+/* ========== GRADIENT EFFECTS ========== */
+.gradient-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.gradient-neon {
+  background: linear-gradient(135deg, #00d9ff 0%, #d946ef 50%, #ff10f0 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00d9ff 0%, #d946ef 50%, #ff10f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== SOFT SHADOW ========== */
+.soft-shadow {
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.soft-shadow-lg {
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37), 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+/* ========== BORDER EFFECTS ========== */
+.border-glow {
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  box-shadow: inset 0 0 20px rgba(99, 102, 241, 0.1), 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.border-glow-neon {
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  box-shadow: inset 0 0 20px rgba(0, 217, 255, 0.05), 0 0 30px rgba(0, 217, 255, 0.2);
+}
+
+/* ========== SMOOTH TRANSITIONS ========== */
+button, a, input {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 14, 39, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.8);
+}
+
+/* ========== FLOATING BACKGROUND ELEMENTS ========== */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-30px) translateX(10px); }
+}
+
+.floating-bg {
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0.05;
+  animation: float-slow 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========== RIPPLE EFFECT ========== */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.6);
+  pointer-events: none;
+  animation: ripple 0.6s ease-out;
+}
